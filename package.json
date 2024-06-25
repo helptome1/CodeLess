@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "husky",
     "lint:stage": "lint-staged",
     "commit": "cz-git",
     "commitlint": "commitlint --edit",
