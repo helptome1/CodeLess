@@ -3,7 +3,6 @@ import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 import { ref } from 'vue'
 const demo = ref('')
-// const demo1 =
 </script>
 
 <template>
