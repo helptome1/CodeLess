@@ -1,3 +1,9 @@
 {
-  "extends": ["stylelint-config-standard", "stylelint-config-prettier", "stylelint-config-html/vue"]
+  "extends": "stylelint-config-recommended-vue",
+  "overrides": [
+    {
+      "files": ["*.vue", "**/*.vue"],
+      "rules": {}
+    }
+  ]
 }

@@ -17,7 +17,7 @@
     "lint": "run-p lint:js type-check lint:style",
     "lint:js": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
-    "lint:style": "stylelint **/*.{vue,css}"
+    "lint:style": "stylelint **/*.vue"
   },
   "lint-staged": {
     "*.{html,vue,css,sass,scss,ts}": "prettier --write",
@@ -57,12 +57,11 @@
     "jsdom": "^24.1.0",
     "lint-staged": "^15.2.7",
     "npm-run-all2": "^6.2.0",
+    "postcss-html": "^1.7.0",
     "prettier": "^3.2.5",
     "stylelint": "15.10.2",
-    "stylelint-config-html": "1.1.0",
-    "stylelint-config-prettier": "9.0.5",
+    "stylelint-config-recommended-vue": "^1.5.0",
     "stylelint-config-standard": "34.0.0",
-    "stylelint-config-vue": "1.0.0",
     "tsno": "^2.0.0",
     "typescript": "^5.5.2",
     "vite": "^5.3.1",
