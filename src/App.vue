@@ -15,6 +15,9 @@ const demo = ref('')
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/layout">layout</RouterLink>
+        <RouterLink to="/dataSource">dataSource</RouterLink>
+        <RouterLink :to="{ name: 'action', params: { run: 'actions_123' } }">action</RouterLink>
       </nav>
     </div>
   </header>
