@@ -1,5 +1,5 @@
 <template>
-  <div class="runtime">
+  <div class="about">
     <h1>This is ActionsView</h1>
   </div>
   <RouterView></RouterView>

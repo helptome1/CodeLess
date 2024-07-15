@@ -2,8 +2,8 @@
   "extends": "stylelint-config-recommended-vue",
   "overrides": [
     {
-      "files": ["*.vue", "**/*.vue"],
-      "rules": {}
+      "files": ["*.vue", "**/*.vue "],
+      "rules": { "no-empty-source": null }
     }
   ]
 }

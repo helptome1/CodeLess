@@ -31,6 +31,7 @@
     }
   },
   "dependencies": {
+    "@icon-park/vue-next": "1.4.2",
     "pinia": "^2.1.7",
     "vue": "^3.4.29",
     "vue-router": "^4.3.3"
@@ -59,6 +60,8 @@
     "npm-run-all2": "^6.2.0",
     "postcss-html": "^1.7.0",
     "prettier": "^3.2.5",
+    "sass": "^1.77.8",
+    "sass-loader": "^14.2.1",
     "stylelint": "15.10.2",
     "stylelint-config-recommended-vue": "^1.5.0",
     "stylelint-config-standard": "34.0.0",

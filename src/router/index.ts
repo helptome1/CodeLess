@@ -1,23 +1,27 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { h } from 'vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/dataSource',
+      path: '/',
+      name: 'home',
+      redirect: '/app/dataSource'
+    },
+    {
+      path: '/app/dataSource',
       name: 'dataSource',
-      component: () => h('div', 'dataSource')
+      component: () => import('../views/DataSourceView.vue')
     },
     {
-      path: '/layout',
+      path: '/app/layout',
       name: 'layout',
-      component: () => h('div', 'layout')
+      component: () => import('../views/LayoutView.vue')
     },
     {
-      path: '/layout',
-      name: 'layout',
-      component: () => h('div', 'layout')
+      path: '/app/actions',
+      name: 'actions',
+      component: () => import('../views/ActionsView.vue')
     }
   ]
 })
