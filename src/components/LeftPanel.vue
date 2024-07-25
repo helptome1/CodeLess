@@ -62,7 +62,7 @@ const toggleMode = (type: Mode) => {
 }
 .left-panel-material {
   flex: 1;
-  width: 180px;
+  width: 240px;
   height: 100%;
   overflow: hidden;
   background-color: #f5f5f5;
