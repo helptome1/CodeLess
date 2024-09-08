@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { WaterfallsH, Equalizer } from '@icon-park/vue-next'
 import { ref } from 'vue'
+import { SmoothDndDraggable } from '@/components/SmoothDnd/SmoothDndDraggable'
+import { SmoothDndContainer } from '@/components/SmoothDnd/SmoothDndContainer'
 type Mode = 'outline' | 'blocks' | null
 
 const mode = ref<Mode>(null)
@@ -25,7 +27,23 @@ const toggleMode = (type: Mode) => {
       </div>
     </div>
     <Transition name="left-panel">
-      <div class="left-panel-material" v-show="mode">{{ mode }}</div>
+      <div class="left-panel-material" v-show="mode">
+        <SmoothDndContainer
+          class="block-group"
+          group-name="blocks"
+          tag="div"
+          behaviour="copy"
+          @drag-start="(e: any, v) => console.log('start', e, v)"
+          @drop="(e) => console.log('drop', e)"
+          :get-child-payload="(index: number) => index"
+        >
+          <SmoothDndDraggable v-for="(item, index) in 10" :key="index">
+            <div class="block-item">
+              {{ item }}
+            </div>
+          </SmoothDndDraggable>
+        </SmoothDndContainer>
+      </div>
     </Transition>
   </div>
 </template>
@@ -76,5 +94,18 @@ const toggleMode = (type: Mode) => {
 .left-panel-enter-from,
 .left-panel-leave-to {
   width: 0px;
+}
+
+.block-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.block-item {
+  margin-left: 5px;
+  margin-top: 5px;
+  height: 40px;
+  width: 40px;
+  border: 1px solid var(--color-gray-700);
 }
 </style>
